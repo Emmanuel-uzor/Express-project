@@ -13,25 +13,24 @@ body{
     z-index: 100;
     color: white;
 }
-#container ul :nth-child(2){
+#container ul .w{
     display: inline;
 }
-#container ul :nth-child(2) i{
+#container .ul .w #i{
     margin-left: 6px;
     color: rgb(255, 255, 255,0.7);
-    transition: .5s ;
+    transition: .3s ;
 }
-#container ul :nth-child(2):hover i{
+#container .ul .w #link:hover #i{
     transform: rotate(180deg);
     color: white;
 }
-#son{
-    display: none;
+.w #link{
+    text-decoration: none;
+    color: rgb(255, 255, 255,0.7);
+    transition: .3s;
 }
-.w:hover #son{
-    display: block;
-}
-#container :nth-child(2){
+#container .ul{
     display: flex;
     list-style-type: none;
     gap: 35px;
@@ -39,17 +38,117 @@ body{
     text-transform: capitalize;
     padding-left: 0;
 }
-#container ul li{
+#container .ul .not{
     position: relative;
-    color: rgb(255, 255, 255,0.7);
     transition: .3s ;
 }
-#container ul :nth-child(1){
+.ul .on{
+    color: rgb(255, 255, 255,0.7);
+}
+#container ul .ton{
     color: white;
 }
-#container ul li:hover{
+.ul .not:hover{
     cursor: pointer;
     color: white;
+}
+.w #link:hover{
+    cursor: pointer;
+    color: white;
+}
+#sonn{
+    background-color: white;
+    position: absolute;
+    display: none;
+}
+#sonn .li{
+    color: black;
+    list-style-type: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: .3s;
+}
+#sonn .www:hover{
+    color:  rgb(33, 33, 253);
+    cursor: pointer;
+}
+#sonn #link2:hover{
+    color:  rgb(33, 33, 253);
+    cursor: pointer;
+}
+#sonn .ul2{
+    padding: 28px 21px;
+    width: 133px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: "Open Sans";
+}
+#sonn #link2{
+    text-decoration: none;
+    color: black;
+}
+#sonn i{
+    color: black;
+    font-size: 10px;
+    margin-left: 52px;
+}
+#sonn2{
+    position: absolute;
+    background-color: white;
+    left: 150px;
+    top: 50px;
+    width: 133px;
+    padding: 28px 21px;
+    display: none;
+}
+#sonn2 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 30px;
+    padding-left: 0%;
+    font-family: "Open Sans";
+}
+#sonn2 li{
+    list-style-type: none;
+    font-size: 13.5px;
+    text-transform: capitalize;
+    transition: .3s ;
+}
+#sonn2 li:hover{
+    color:  rgb(33, 33, 253);
+    cursor: pointer;
+}
+.ww:hover #sonn2{
+    display: block;
+    animation: fade .2s ease-in-out;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}
+.w:hover #sonn{
+    display: block;
+    animation: fade-in .2s ease-out;
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
 }
 #container ul .not::after{
     content: "";
@@ -60,17 +159,17 @@ body{
     left: 0;
     bottom: -8px;
     transform: scaleX(0);
-    transition: .2s ease-in-out;
+    transition: .2s ease-out;
 }
 #container ul li:hover::after{
     transform: scaleX(1);
-
 }
 #container h1{
     font-size: 25px;
     text-transform: capitalize;
     font-family: "Montserrat";
     position: relative;
+    color: white;
 }
 #container h1:hover{
     cursor: pointer;
@@ -169,8 +268,6 @@ body{
 
 
 
-
-
 /* ---------------Beginning of (section 1)------------ */
 
 
@@ -248,7 +345,7 @@ body{
     border: none;
     margin-bottom: 45px;
     width: 180px;
-    transition: .5s;
+    transition: .3s;
 }
 .about-pics button:hover{
     color: white;
@@ -289,6 +386,7 @@ body{
     font-family: "Open Sans";
     font-size: 14px;
     color: #212529;
+    line-height: 20px;
 }
 .about-text button{
     font-size: 12px;
@@ -301,7 +399,7 @@ body{
     border-radius: 50px;
     border: none;
     margin-top: 10px;
-    transition: .5s;
+    transition: .3s;
 }
 .about-text button:hover{
     color: white;
@@ -374,7 +472,6 @@ body{
 
 
 
-
 /* ------------Beginning of (section 3)----------- */
 
 #section3{
@@ -437,7 +534,6 @@ body{
 }
 
 /* ------------Ending of (section 3)----------- */
-
 
 
 
@@ -511,7 +607,6 @@ body{
 
 
 
-
 /* -------------Beginning of (section 5)---------- */
 
 .section5{
@@ -542,11 +637,12 @@ body{
 }
 .final-icon{
     font-size: 14px;
-    line-height: 2px;
+    line-height: 25px;
 }
 .final-icon p{
-    opacity: 50%;
+    opacity: 53%;
     font-family: "Open Sans";
+    margin: 0;
 }
 .final button{
     font-size: 12px;
@@ -568,4 +664,80 @@ body{
 }
 .check i{
     color: rgb(33, 33, 253);
+}
+
+/* ------------Ending of (section 5)----------- */
+
+
+
+/* ------------Beginning of (footer)------------ */
+
+#footer{
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 45px;
+}
+.first-line h3{
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.first-line p{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: #7a7979;
+    width: 350px;
+}
+.first-line-son{
+    margin-bottom: 40px;
+}
+.first-line-son h3{
+    margin-bottom: 30px;
+}
+.footer-icon i{
+    border: none;
+    color: white;
+    text-align: center;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 13px;
+}
+.footer-icon a{
+    text-decoration: none;
+}
+.footer-icon h3{
+    margin-bottom: 30px;
+}
+.second-line h3{
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.second-line ul{
+    padding-left: 0;
+}
+.second-line li{
+    list-style-type: none;
+    color: #7a7979;
+    font-family: "Open Sans";
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-top: 12px;
+}
+#footer2 p{
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 14px;
+    color: #7a7979;
+    margin-top: 85px;
+    margin-bottom: 85px;
+}
+#footer2 p :nth-child(1){
+    color: rgb(216, 0, 0);
+    font-size: 16px;
+}
+#footer2 p :nth-child(2){
+    color: rgb(0, 0, 194);
+    opacity: 100%;
+    cursor: pointer;
 }
