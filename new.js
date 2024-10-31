@@ -3,25 +3,39 @@ let barChild = document.querySelector(".lastt-child")
 
 const siblings = document.getElementById("siblings")
 const siblingsChild = document.querySelector(".siblings-child")
+const down = document.getElementById("caret-down")
+const close = document.getElementById("fa-close")
 
 
 bar.addEventListener("click", function (event) {
 
     if (barChild.style.display === "none") {
         barChild.style.display = "flex"
+        siblingsChild.style.display = "none"
 
-    } else {
+    }else{
         barChild.style.display = "none"
     }
-
 })
+close.addEventListener("click", function (event) {
+
+    if (barChild.style.display === "flex") {
+        barChild.style.display = "none"
+
+    }
+})
+
 
 siblings.onclick = function (event) {
 
     if (siblingsChild.style.display === "none") {
         siblingsChild.style.display = "flex"
+        down.style.transform = "rotate(180deg)"
+
     } else {
         siblingsChild.style.display = "none"
+        down.style.transform = "rotate(0deg)"
+
     }
 
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 html{
     scroll-behavior: smooth;
 }
@@ -195,32 +197,44 @@ body{
 #container #lastt{
     display: none;
     color: white;
+    font-size: 26px;
 }
 #lastt-boss{
     display: none;
 }
 .lastt-child{
-    position: absolute;
-    right: 1px;
-    background-color: transparent;
-    backdrop-filter: blur(40px);
+    position: fixed;
+    right: 0px;
+    /* background-color: transparent; */
+    background: linear-gradient( #000, #7e7e7e);
+    /* backdrop-filter: blur(40px); */
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-bottom: 2px solid white;
-    border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    width: 70%;
+    border-top-left-radius: 30% 15% ;
+    width: 60%;
     padding: 30px;
     display: none;
     flex-direction: column;
-    gap: 45px;
-    margin-top: 10px;
-    transition: .2s;
+    gap: 35px;
+    margin-top: -50px;
+    transition: .3s ease-in-out;
+    min-height: 70%;
+}
+.fa-close{
+    font-size: 26px;
+    text-align: end;
+    margin-right: -10px;
 }
 .lastt-child li{
     list-style-type: none;
     text-transform: capitalize;
     font-family: "Open Sans";
+    transition: .2s;
+}
+.lastt-child .l:hover{
+    font-weight: bolder;
 }
 #siblings a{
     color: white;
@@ -228,7 +242,7 @@ body{
 }
 .siblings-child{
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     margin-top: 30px;
     padding-left: 40px;
     display: none;
@@ -237,6 +251,9 @@ body{
     margin-right: 15px;
     transform: rotate(-90deg);
 }
+#caret-down{
+    transition: .2s;
+}
 
 @media (max-width: 700px) {
     #container .ul{
@@ -244,9 +261,16 @@ body{
     }
     #container #lastt{
         display: block;
+        cursor: pointer;
     }
     #lastt-boss{
         display: block;
+    }
+    #lastt-boss li{
+        cursor: default;
+    }
+    #lastt-boss #siblings{
+        cursor: pointer;
     }
 }
 
@@ -273,7 +297,7 @@ body{
     width: 100%;
     filter: brightness(40%);
     position: relative;
-    height: 750px;
+    height: 600px;
     object-fit: cover;
 } 
 #main-p{
@@ -285,15 +309,17 @@ body{
 }
 #main-p h1{
     color: white;
-    font-size: 50px;
+    font-size: clamp(32px ,5vw, 50px);
+    /* font-size: 50px; */
     font-weight: bolder;
     margin-bottom: 0;
-    line-height: 58px;
+    line-height: clamp(40px, 5vw, 58px);
+    font-size-adjust: auto;
 }
 #main-p p{
     color: white;
-    font-size: 15px;
-    line-height: 21px;
+    font-size: clamp(13px, 3vw , 15px);
+    line-height: clamp(18px , 3vw, 21px);
     opacity: 50%;
     margin-top: 10px;
     font-family: sans-serif;
@@ -307,7 +333,7 @@ body{
 }
 #main-p-child button{
     padding: 18px 30px;
-    font-size: 12px;
+    font-size: clamp(10px , 3vw, 12px);
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -323,7 +349,7 @@ body{
 }
 #main-p-child h5{
     color: rgb(240, 240, 240);
-    font-size: 15px;
+    font-size: clamp(13px, 3vw, 15px);
     font-family: sans-serif;
     font-weight: normal;
 }
@@ -405,7 +431,7 @@ body{
     border-radius: 50px;
     border: none;
     margin-bottom: 45px;
-    width: 180px;
+    max-width: 180px;
     transition: .3s;
 }
 .about-pics button:hover{
@@ -491,6 +517,11 @@ body{
     .about-text{
         padding: 25px 0;
         width: 100%;
+    }
+}
+@media (max-width: 650px){
+    .next{
+        padding: 0 10%;
     }
 }
 
@@ -688,6 +719,8 @@ body{
     display: flex;
     gap: 2%;
     justify-content: center;
+    flex-flow: wrap;
+    width: 100%;
 }
 .contact input{
     background-color: rgb(194, 194, 194);
@@ -695,13 +728,10 @@ body{
     border: none;
     font-size: 17px;
     transition: .2s ease-in-out;
+    flex-grow: 1;
 }
 .contact input:focus{
     background-color: white;
-}
-.row{
-    flex-flow: wrap;
-    width: 100%;
 }
 .row input{
     flex: 1;
@@ -744,6 +774,11 @@ body{
 }
 .contact button:hover{
     cursor: pointer;
+}
+@media (max-width: 600px) {
+    .contact{
+        padding: 35px;
+    }
 }
 
 /* -------------Ending of (section 4)---------- */
@@ -873,7 +908,7 @@ body{
     transition: .2s;
 }
 .footer-icon .fa-instagram:hover{
-    background-image: url(images/download.jpeg);
+    background-image: url(../images/download.jpeg);
 }
 .footer-icon .fa-facebook:hover{
     background-color: blue;
@@ -888,7 +923,7 @@ body{
     background-color: #c82c28;
 }
 .footer-icon .fa-facebook-messenger:hover{
-    background-color: #001aaa;
+    background-color: #1437fa;
 }
 .footer-icon a{
     text-decoration: none;
