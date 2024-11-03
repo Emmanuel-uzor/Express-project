@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:auto;
 }
 body{
     margin: 0;
@@ -309,17 +309,15 @@ body{
 }
 #main-p h1{
     color: white;
-    font-size: clamp(32px ,5vw, 50px);
-    /* font-size: 50px; */
+    font-size: clamp(30px ,5vw, 50px);
     font-weight: bolder;
     margin-bottom: 0;
-    line-height: clamp(40px, 5vw, 58px);
-    font-size-adjust: auto;
+    line-height: clamp(35px, 5vw, 58px);
 }
 #main-p p{
     color: white;
     font-size: clamp(13px, 3vw , 15px);
-    line-height: clamp(18px , 3vw, 21px);
+    line-height: clamp(16px , 3vw, 21px);
     opacity: 50%;
     margin-top: 10px;
     font-family: sans-serif;
@@ -341,6 +339,7 @@ body{
     border: none;
     font-family: "Montserrat";
     transition: .2s ease-in-out;
+    word-break: normal;
 }
 #main-p-child button:hover{
     background-color: rgb(33, 33, 253);
@@ -353,7 +352,13 @@ body{
     font-family: sans-serif;
     font-weight: normal;
 }
-
+@media (max-width: 490px){
+    #main-p{
+        left: 0;
+        right: 0;
+        padding: 20px;
+    }
+}
 /* -------------Ending of (main)----------- */
 
 
@@ -519,9 +524,9 @@ body{
         width: 100%;
     }
 }
-@media (max-width: 650px){
+@media (max-width: 800px){
     .next{
-        padding: 0 10%;
+        margin: 0 10%;
     }
 }
 
@@ -551,6 +556,7 @@ body{
     display: flex;
     gap: 0.6%;
     width: 100%;
+    /* flex-grow: 1; */
 }
 .hover-son{
     padding: 15px 30px;
